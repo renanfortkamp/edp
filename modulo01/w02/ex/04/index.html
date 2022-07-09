@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Ex 04</title>
+</head>
+<body>
+    <h1>Formulário de cadastro</h1>
+    <fieldset>
+        <legend>Preencha os Dados:</legend>
+        <form action="noReset">
+            
+            <div>
+                <label for="name">Nome:</label>
+            <input type="text" placeholder="Digite seu nome" name="name" id="name">
+            </div>
+            <div>
+                <label for="birthdade">Data de Nascimento:</label>
+                <input type="date" name="birthdade" id="birthdade">
+            </div>
+            <div>
+                <label for="cpf">CPF:</label>
+            <input type="number" name="cpf" id="cpf" placeholder="Digite seu cpf sem ponto">
+            </div>
+            <div>
+                <label for="municipio">Municipio</label>
+            <select name="municipio" id="municipio">
+                <option value=""></option>
+            <option value="palhoça">Palhoça</option>
+            <option value="florianopolis">Floripa</option>
+            <option value="saojose">São Jose</option>
+            </select>
+            </div>
+
+            
+
+    
+        </form>
+    </fieldset>
+    
+</body>
+</html>
