@@ -1,0 +1,148 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* CABEÇALHO  */
+#head1{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgb(1, 1, 122);
+    color: aliceblue;
+
+}
+
+.logo{
+    margin-left: 300px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.head2 ul{
+    height: 50px;
+    display: flex;
+    margin-right: 50px;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-left: 50px;
+    height: 100%;
+}
+a{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 100%;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* cards */
+
+#sec1 #corpo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.card{
+    border: 1px solid rgb(1, 1, 122);;
+    height: 270px;
+    width: 260px;
+    border-radius: 5px;
+    color: rgb(0, 0, 53);;
+}
+
+img{
+    padding: 5px;
+    width: 250px;
+    height: 150px;
+}
+
+.card .corpo1{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center;
+}
+
+.card button{
+    background-color: red;
+    height: 40px;
+    width: 100px;
+    border:1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    color: aliceblue;
+
+}
+
+.card h2{
+    margin-bottom: 30px;
+}
+
+/* escolher viagem */
+
+.escolha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+    
+}
+
+.escolha button{
+    font-weight: bold;
+    color: aliceblue;
+    height: 34px;
+    width: 100px;
+    background-color: red;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 78);;
+}
+
+input{
+    margin-right: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 78);;
+
+}
+
+/* rodape */
+#rodape{
+    padding-top: 20px;
+    color: aliceblue;
+    background-color: rgb(1, 1, 122);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.logo1{
+    margin-left: 100px;
+    font-size: 2.5rem;
+    
+    font-weight: bold;
+}
+
+p{
+    margin-right: 50px;
+    font-size: 1.3em;
+}
