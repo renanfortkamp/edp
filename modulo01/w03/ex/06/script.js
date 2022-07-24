@@ -1,29 +1,32 @@
-// Faça uma página HTML contendo um label que exiba a mensagem “Insira sua data de nascimento”, um campo de texto que só permita inserir data (dica: input type date) e um botão rotulado “calcular idade”. Programe uma função a ser executada quando o usuário clicar no botão, que faça o cálculo da idade do usuário, e então exiba a idade em um texto na página HTML.
-
-const btn = document.querySelector('button');
-btn.addEventListener('click',function(){calcularIdade()
-});
-
+const data = new Date();
+const dia = data.getDate();
+const mes = data.getMonth() +1;
+const estacao = document.querySelector('div');
 
 
-
-const calcularIdade = ()=>{
-    let input = document.querySelector('input').value;
-    if(input == ''){
-        alert("Insira a sua idade")
-    }else{
-        let birth = new Date(input);
-        let check = new Date();
-        let milliDay = 1000 * 60 * 60 * 24;
-        let ageInDays = (check - birth) / milliDay;
-        let ageInYears =  Math.floor(ageInDays / 365 );
-        showDate(ageInYears);
-
-    }
-    
-   };
-
-   const showDate= (ageInYears) =>{
-    let p = document.querySelector('p');
-    p.innerText = `${ageInYears}`
+const minhaEstacao = () =>{
+    if(dia >= 21 && mes == 12 || dia >= 1 && mes == 1 || dia >= 1 && mes == 2 || dia <= 19 && mes == 3  ){
+        estacao.innerHTML = `
+        <img src="imgs/verao.png" alt="Verão">
+        <h1>Verão</h1>
+        `
+    } else if( dia >= 20 && mes == 3 || dia >= 1 && mes == 4 || dia >= 1 && mes == 5 || dia < 21 && mes == 6 ){
+        estacao.innerHTML = `
+        <img src="imgs/outono.png" alt="Outono">
+        <h1>Outono</h1>
+        `;
+    } else if( dia >= 21 && mes == 6 || dia >= 1 && mes == 7 || dia >= 1 && mes == 8 || dia <= 21 && mes == 9 ){
+        
+        estacao.innerHTML = `
+        <img src="imgs/inverno.png" alt="Inverno">
+        <h1>Inverno</h1>
+        `
+    } else(
+        estacao.innerHTML = `
+        <img src="imgs/primavera.png" alt="Primavera">
+        <h1>Primavera</h1>
+        `
+        );
 }
+
+minhaEstacao()
