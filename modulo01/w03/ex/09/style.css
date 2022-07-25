@@ -1,0 +1,277 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@renanfortkamp 
+renanfortkamp
+/
+To-Do-List
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+To-Do-List/style.css
+@renanfortkamp
+renanfortkamp Ajustado cor do botão adicionar com não checado
+Latest commit 1416a67 on 15 Nov 2021
+ History
+ 1 contributor
+232 lines (206 sloc)  4.51 KB
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+*:focus-visible{
+  outline: 0;
+}
+
+body{
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 100vh;
+  background: #ffffff;  
+  background: linear-gradient(to left, #e6e6e6bf, #fdfdfdbf,  #e6e6e6bf);
+}
+
+#conteinerGeral{
+  position: absolute;
+  top: 10px;
+  width: 90vw;
+  padding: 0px;
+  display: flex;
+  min-width: 200px;
+  max-width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(30, 210, 177, 0);
+  border: 1px rgba(0, 0, 0, 0) solid;
+  padding-left: 3px;
+  padding-right: 3px;
+} 
+
+h1{
+  display: flex;
+  height: 32px;
+  font-size: 3rem;
+  text-align: center;
+  background-color: rgba(30, 210, 177, 0);
+  color: black;  
+  border-bottom: 1px solid rgba(0, 0, 0, 0.207);
+  padding-top: 0px;
+  padding-bottom: 12px;;
+  margin-bottom: 30px;
+  
+}
+h1>img{
+  height: 60px;
+
+}
+
+#conteinerInputText{
+  max-width: 600px;
+  min-width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: rgb(252, 252, 252);
+  color: black;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  height: 38px;
+  width: 80%;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.638);
+  transition: 1s;
+}
+
+@media screen and (max-width: 400px) {
+  #conteinerInputText{
+    width: 90vw;
+  }
+}
+
+/* Campo de digitação da tarefa */
+#textArea{
+  color: black;
+  padding-left: 10px;
+  height: 30px;
+  width: 80%;
+  height: 38px;
+  font-size: 1.4rem;
+  margin-right: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+
+}
+
+
+
+/* button adicionar */
+#addTask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(117, 137, 218);
+  color: rgb(124, 145, 228);
+  background-color: rgba(252, 252, 252, 0);
+  cursor: pointer;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 2.5rem;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.672);
+  margin-right: 4px;
+}
+
+/* button delete all tasks */
+#deleteALL{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  background-color: rgba(252, 252, 252, 0);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 0.8rem;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.672);
+  margin-right: 4px;
+  font-weight: bolder;
+
+}
+ 
+
+#conteinerList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-bottom: 0px;
+}
+
+.taskList{
+  width: 100%;
+  height: 38px;
+  display: flex;
+  font-size: 1.4rem;
+  list-style-type: none;
+  border: 1px rgba(0, 0, 0, 0.344) solid;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 18px;
+  border-top-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-bottom: 10px;
+  background-color: rgba(252, 252, 252, 0.693);
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.638);
+}
+
+.taskList:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 0.4em rgb(0, 0, 0);
+}
+
+.textTask{
+  overflow:hidden;
+  white-space:nowrap;
+  width: 84%;
+  font-size: 1.4rem;
+  margin-right: auto;
+}
+
+.checked{
+  text-decoration-line: line-through;
+  color: black;
+}
+
+.checkbox {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 3px solid rgb(0, 0, 0);
+  appearance: none ;
+  outline: none;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0);
+  background-color: rgb(137, 161, 255);
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
+  border: 3px solid rgb(25, 44, 55);
+}
+
+.checkbox:checked {
+  margin-left: 6.1px;
+  width: 23px;
+  height: 23px;
+  background-color: rgb(84, 104, 114);
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
+  border: 3px solid rgb(25, 44, 55);
+  margin-right: 6.87px;
+}
+
+/* Delete Task */
+
+.deleteTask{
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 0, 0);
+  background-color: rgba(252, 252, 252, 0);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 1rem;
+  margin-right: 4px;
+  line-height: 0px;
+  font-weight: 900;
+  border: 2.5px solid rgb(255, 0, 0);
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0);
+}
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+ Octotree
+ Login with GitHub
